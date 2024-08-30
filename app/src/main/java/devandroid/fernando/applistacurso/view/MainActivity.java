@@ -43,11 +43,10 @@ public class MainActivity extends AppCompatActivity {
         controller = new PessoaController();
 
         pessoa = new Pessoa();
-        pessoa.setPrimeiroNome("Fernando");
-        pessoa.setSobrenome("Correa");
-        pessoa.setCursoDesejado("teste");
-        pessoa.setTelefoneContato("12323212312");
-
+        pessoa.setPrimeiroNome(preferences.getString("PrimeiroNome",""));
+        pessoa.setSobrenome(preferences.getString("Sobrenome",""));
+        pessoa.setCursoDesejado(preferences.getString("Curso",""));
+        pessoa.setTelefoneContato(preferences.getString("Telefone",""));
 
         editPrimeiroNome = findViewById(R.id.editPrimeiroNome);
         editSobrenome = findViewById(R.id.editSobrenome);
